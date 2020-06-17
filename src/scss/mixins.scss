@@ -1,0 +1,8 @@
+// TODO: Have a go doing this with zoom, which is better approach in some instances.
+@function sizeScale($min, $max) {
+    @return calc(#{$min}px + (#{$max} - #{$min}) * ((100vw - 375px) / (1800 - 375)));
+}
+
+@function fontSizeScale($min, $max) {
+    @return calc(#{$min}px + (#{$max} - #{$min}) * ((100vw - 375px) / (1800 - 375)));
+}

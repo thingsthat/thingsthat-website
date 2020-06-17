@@ -1,0 +1,17 @@
+header {
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    z-index: 1; 
+    padding: 1em 0;
+    width: 100vw;
+    background: var(--color-background);
+
+    .header__logo {
+        font-size: fontSizeScale(20, 30);
+        text-decoration: none;
+        border: 0;
+        font-weight: 500;
+        color: var(--color-text);
+    }
+}

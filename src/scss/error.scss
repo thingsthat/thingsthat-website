@@ -1,0 +1,25 @@
+main#error {
+    section {
+        .inner {
+            div {
+                overflow: hidden;
+                color: var(--color-text);
+                text-align: center;
+                font-size: fontSizeScale(30, 74);
+                font-weight: 500;
+                background-image: url('/img/404.gif');
+                background-position: center;
+                background-size: cover;
+                min-height: 80vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @media only screen and (max-width: 680px) {
+                    min-height: auto;
+                    height: 35vh;
+                }
+            }
+        }
+    }
+}

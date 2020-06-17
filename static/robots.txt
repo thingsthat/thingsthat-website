@@ -1,0 +1,4 @@
+User-agent: *
+
+# Sitemap Index Files
+Sitemap: https://www.thingsthat.com/sitemap.xml

@@ -1,0 +1,25 @@
+{
+  "name": "thingsthat-website",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "gridsome build",
+    "dev": "gridsome develop",
+    "explore": "gridsome explore",
+    "lint": "sass-lint && eslint --ext .js src"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@createunalike/unalike-js": "^0.13.2",
+    "granim": "^2.0.0",
+    "gridsome": "^0.7.5"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0",
+    "eslint-plugin-html": "^5.0.5",
+    "eslint-plugin-vue": "^5.2.2",
+    "node-sass": "^4.12.0",
+    "sass-lint": "^1.13.1",
+    "sass-loader": "^7.1.0",
+    "style-resources-loader": "^1.2.1"
+  }
+}

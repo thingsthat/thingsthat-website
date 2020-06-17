@@ -1,0 +1,60 @@
+section.journal-list {
+    .journal-list__list {
+        min-height: 500px;
+        display: flex;
+
+        .col {
+            min-height: 500px;
+            flex: 1;
+            margin-right: sizeScale(20, 40); 
+
+            @media only screen and (max-width: 680px) {
+                margin-right: 0;
+            }
+
+            .item {
+                display: block;
+                font-size: fontSizeScale(15, 22);
+                margin-bottom: sizeScale(20, 40);
+                font-weight: 400;
+                text-decoration: none;
+                border: 0;
+                line-height: 1.4;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                @media only screen and (min-width: 680px) {
+                    &:hover {
+                        img {
+                            opacity: .8;
+                        }
+
+                        .label {
+                            opacity: .8;
+                        }
+                    }
+                }
+                
+                figure {
+                    background: #000;
+                    margin-bottom: sizeScale(10, 20);
+                    font-size: 0;
+
+                    img {
+                        background: #000;
+                        width: 100%;
+                        margin: 0;
+                    }
+                }
+
+                strong {
+                    display: block;
+                    margin-bottom: sizeScale(5, 10);
+                    font-size: fontSizeScale(20, 25);
+                }
+            }
+        }
+    }
+}

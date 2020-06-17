@@ -1,0 +1,38 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: thingsthat/thingsthat-circleci:latest
+
+    working_directory: ~/thingsthat-static
+    
+    branches:
+      only:
+        - master
+  
+    steps:
+      - checkout
+
+      - run:
+          name: install packages
+          command: npm install
+
+      - run: 
+          name: build file
+          command: printf '{ "build" ':' "'$CIRCLE_SHA1'" }' > build.json
+
+      - run:
+          name: lint
+          command: npm run lint
+
+      - run:
+          name: npm build
+          command: npm run build
+
+      - run:
+          name: deploy to S3
+          command: aws s3 sync dist/ s3://thingsthat.com --region eu-west-1
+
+      - run:
+          name: invalidate cloudfront
+          command: aws cloudfront create-invalidation --distribution-id=E2WHZPGLTYGXGS --paths "/*"

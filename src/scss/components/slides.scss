@@ -1,0 +1,85 @@
+.slides {
+    position: relative;
+    border: 0;
+  
+    .slides__items {
+        overflow: hidden;
+        height: 65vh;
+        min-height: 700px;
+        max-height: 800px;
+        padding: 0;
+
+        @media only screen and (max-width: 1024px) {
+            height: 60vw;
+            min-height: auto;
+        }
+    }
+
+    div {
+        overflow: hidden;
+    }
+
+    h2 {
+        font-size: fontSizeScale(20, 30);
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+
+    .video {
+        position: absolute;
+        top: 0;
+        left: sizeScale(20, 30);
+        right: sizeScale(20, 30);
+        bottom: 0;
+        display: none;
+        overflow: hidden;
+
+        video {
+            position: absolute; 
+            right: 0; 
+            bottom: 0;
+            min-width: 100%; 
+            min-height: 100%;
+            width: auto; 
+            height: auto; 
+            background-size: cover;
+            overflow: hidden;
+        }
+    }
+
+    .static {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        overflow: hidden;
+    }
+
+    .image {
+        position: absolute;
+        top: 0;
+        left: sizeScale(20, 30);
+        right: sizeScale(20, 30);
+        bottom: 0;
+        background: #000;
+        display: none;
+
+        div {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: #000;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    .current {
+        display: block;
+    }
+}
