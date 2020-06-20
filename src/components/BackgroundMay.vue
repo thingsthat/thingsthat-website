@@ -62,6 +62,9 @@ export default {
     },
     beforeDestroy() {
 
+        if (process.isClient) {
+            window.removeEventListener('scroll', this.handleScroll);
+        }
         
     },
     methods: {
