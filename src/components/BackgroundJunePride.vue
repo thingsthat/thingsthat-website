@@ -1,5 +1,5 @@
 <template>
-    <canvas id="june-canvas" class="background-full" />
+    <canvas v-show="show" id="june-canvas" class="background-full" />
 </template>
 
 <script>
@@ -10,13 +10,20 @@
 export default {
     data() {
         return {
+            show: false,
             points: [],
             pageHeight: 0,
+            isDrawActive: true,
         };
     },
     mounted() {
 
         if (process.isClient) {
+            
+            // If mobile, do nothing. Doesn't work on mobile, as finger is for scrolling.
+            if (this.isMobile()) {
+                return;
+            }
 
             this.initCanvas();
 
@@ -25,6 +32,7 @@ export default {
             this.animate();
 
             window.addEventListener('resize', this.initCanvas);
+            window.addEventListener('scroll', this.handleScroll);
    
         }
 
@@ -33,7 +41,12 @@ export default {
 
         if (process.isClient) {
 
+            if (this.isMobile()) {
+                return;
+            }
+
             window.removeEventListener('resize', this.initCanvas);
+            window.removeEventListener('scroll', this.handleScroll);
                 
             this.points = null;
 
@@ -48,7 +61,12 @@ export default {
         
     },
     methods: {
+        isMobile() {
+            return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent));
+        },
         initCanvas() {
+
+            this.show = true;
 
             const canvas = this.$el;
             const ctx = canvas.getContext('2d');
@@ -62,7 +80,25 @@ export default {
             this.pageHeight = this.$parent.$el.offsetHeight;
 
         },
+        handleScroll() {
+
+            // Basic draw lock
+            this.isDrawActive = false;
+
+            if (this.timerDrawWait) {
+                clearTimeout(this.timerDrawWait);
+            }
+
+            this.timerDrawWait = setTimeout(() => {
+                this.isDrawActive = true;
+            }, 500);
+
+        },
         handleMouseMove(e) {
+
+            if (!this.isDrawActive) {
+                return;
+            }
 
             if (this.timerStartUntwist) {
                 clearTimeout(this.timerStartUntwist);
@@ -107,6 +143,7 @@ export default {
         },
         startUntwist() {
 
+            // Untwist the line
             this.timerUntwist = setInterval(() => {
                 this.points = this.points.slice(3, this.points.length);
 
@@ -127,6 +164,7 @@ export default {
 
             this.drawLatestLines();
 
+            // Handles any change in dynamic data loading on page
             if (this.pageHeight != this.$parent.$el.offsetHeight) {
                 this.initCanvas();
             }
@@ -140,19 +178,22 @@ export default {
             if (this.points.length > 2) {
             
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
-                ctx.beginPath();
-                ctx.moveTo(this.points[0].x, this.points[0].y);
-                ctx.strokeStyle = `hsl(${this.points[0].hue}, 100%, 50%)`;
                 
-                for (let i = 0; i < this.points.length; i++) {
-                    ctx.lineTo(this.points[i].x, this.points[i].y);
-                    ctx.stroke();
+                for (let i = 0; i < this.points.length - 1; i++) {
+                    
+                    // Stop any major jumps in position
+                    if (i > 0 && Math.abs(this.points[i].y - this.points[i+1].y) > 200) {
+                        continue;
+                    }
 
                     ctx.beginPath();
                     ctx.moveTo(this.points[i].x, this.points[i].y);
                     ctx.strokeStyle = `hsl(${this.points[i].hue}, 100%, 50%)`;
-                }
+                    ctx.lineTo(this.points[i+1].x, this.points[i+1].y);
+                    ctx.stroke();
 
+                    
+                }
             }
 
         },

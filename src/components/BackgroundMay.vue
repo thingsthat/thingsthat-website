@@ -14,7 +14,7 @@ export default {
 
         if (process.isClient) {
 
-            const granimInstance = new Granim({
+            this.granimInstance = new Granim({
                 element: '#may-canvas',
                 name: 'granim',
                 opacity: [1, 1],
@@ -55,30 +55,28 @@ export default {
                 },
             });
 
-            this.scrollListener = window.addEventListener('scroll', function() {
-
-                const elements = document.querySelectorAll('[data-name]');
-
-                for (const element of elements) {
-                    if (element.offsetTop > window.scrollY - window.innerHeight + 400) {
-                        granimInstance.changeState(element.dataset.gradient);
-                        break;
-                    }
-
-                }
-
-            });
+            window.addEventListener('scroll', this.handleScroll);
 
         }
 
     },
     beforeDestroy() {
 
-        if (this.scrollListener) {
-            window.removeEventListener(this.scrollListener);
-            this.scrollListener = null;
-        }
         
+    },
+    methods: {
+        handleScroll() {
+
+            const elements = document.querySelectorAll('[data-name]');
+
+            for (const element of elements) {
+                if (element.offsetTop > window.scrollY - window.innerHeight + 400) {
+                    this.granimInstance.changeState(element.dataset.gradient);
+                    break;
+                }
+
+            }
+        },
     },
 };
 
