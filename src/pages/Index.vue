@@ -51,31 +51,7 @@
                     <p class="link"><a href="https://www.unalike.net" target="_blank">www.unalike.net</a></p>
                 </template>
             </Slides>
-
-            <Slides data-name="emmly" :slides="[
-                { 
-                    type: 'video',
-                    src: {
-                        webm: `/img/products/emmly/slide1.webm`,
-                        mp4: `/img/products/emmly/slide1.mp4`
-                    }
-                },
-            ]"
-            >
-                <template v-slot:header>
-                    <h2>
-                        Emmly Live. Live video sports training.
-                    </h2>
-                </template>
-                <template v-slot:footer>
-                    <p>
-                        Live and interactive video training tool for sports coaches, athletes, and instructors.
-                        Giving them the ability to engage with their audience in realtime, whilst earning for their time and knowledge their time.
-                    </p>
-                    <p class="link"><a href="https://emmly.live" target="_blank">www.emmly.live</a></p>
-                </template>
-            </Slides>      
-
+            
             <Slides data-name="bullboat" :slides="[
                 { type: 'image', src: `/img/clients/bullboat/slide1.jpg`},
             ]"
