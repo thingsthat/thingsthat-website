@@ -27,29 +27,9 @@ export default {
                             ['#000', '#000'],
                         ],
                     },
-                    'emmly': {
-                        gradients: [
-                            ['#8012ff', '#ba8eff'],
-                        ],
-                    },
                     'unalike': {
                         gradients: [
                             ['#ff0075', '#5100fd'],
-                        ],
-                    },
-                    'beryl': {
-                        gradients: [
-                            ['#04d0b3', '#26fbdd'],
-                        ],
-                    },
-                    'youpeople': {
-                        gradients: [
-                            ['#0080ff', '#00ffff'],
-                        ],
-                    },
-                    'bullboat': {
-                        gradients: [
-                            ['#e53e44', '#413341'],
                         ],
                     },
                 },

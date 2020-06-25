@@ -1,0 +1,29 @@
+{
+    "home": {
+        "id": "home",
+        "type": "home",
+        "data": {
+            "title": "Things & That - Media technology design and development.",
+            "header": "Building independent media products and services, and helping others do the same",
+            "body": "<p>Hello</p><p>I'm Zac, a London based maker of products and technology consultant. In a world of ever confusing media and technology, I started Things &amp; That to help brands, agencies, and individuals meet the future head-on with independent design, development and insights. Building products that future-enable creators with tools and services that have purpose and meaning.</p><p>Specialising in ethical and scalable technology design and development, e-commerce, content management and publishing, live video and streaming services, interactive and audio.</p>",
+            "projects": [
+                {
+                    "name": "unalike",
+                    "title": "Unalike. Giving stories a voice.",
+                    "summary": "A publishing platform designed for writers, creators, journalists, and publishers, with tools that reimagine the way we create, publish, and own stories.",
+                    "url": "https://www.unalike.net",
+                    "label": "www.unalike.net",
+                    "slides": [
+                        {
+                            "type": "video",
+                            "src": {
+                                "webm": "/img/products/unalike/slide1.webm",
+                                "mp4": "/img/products/unalike/slide1.mp4"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
