@@ -1,6 +1,6 @@
 footer {
     padding: 0;
-    font-size: fontSizeScale(18, 22);
+    font-size: var(--font-size-small);
 
     .inner {
         display: flex;

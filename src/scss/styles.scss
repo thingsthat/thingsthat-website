@@ -18,13 +18,6 @@
 
 html {
     background: var(--color-background);
-    font-size: 17px;
-}
-
-@media (max-width: 680px) {
-    html {
-        font-size: 15px;
-    }
 }
 
 a {
@@ -42,7 +35,7 @@ a {
 body {
     background: var(--color-background);
     font-weight: 400;
-    line-height: 1.6;
+    line-height: var(--line-height-body);
     color: var(--color-text);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
@@ -68,57 +61,56 @@ main {
 }
 
 .inner {
-    max-width: 1300px;
     margin: 0 auto;
-    padding: 3em sizeScale(20, 30);
+    padding: var(--padding);
     position: relative;
     width: 100%;
 }
 
 h1 {
     font-weight: 500;
-    line-height: 1.4;
-    font-size: fontSizeScale(40, 60);
+    line-height: var(--line-height-header);
+    font-size: var(--font-size-h1);
     color: var(--color-text);
     margin: 0;
 }
 
 h2 {
     font-weight: 500;
-    font-size: fontSizeScale(40, 60);
-    line-height: 1.4;
+    font-size: var(--font-size-h2);
+    line-height: var(--line-height-header);
     color: var(--color-text);
     margin: 1em 0 1em;
 }
 
 h3 {
     font-weight: 500;
-    line-height: 1.4;
+    line-height: var(--line-height-header);
     color: var(--color-text);
     margin: 1em 0 .5em;
-    font-size: fontSizeScale(35, 55);
+    font-size: var(--font-size-h3);
 }
 
 h4 {
     font-weight: 500;
-    line-height: 1.4;
+    line-height: var(--line-height-header);
     color: var(--color-text);
     margin: 1em 0 .5em;
-    font-size: fontSizeScale(30, 50);
+    font-size: var(--font-size-h4);
 }
 
 h5 {
     font-weight: 500;
-    line-height: 1.4;
+    line-height: var(--line-height-header);
     color: var(--color-text);
     margin: 1em 0 .5em;
-    font-size: fontSizeScale(25, 45);
+    font-size: var(--font-size-h5);
 }
 
 ul {
     padding-left: 1.5em;
     margin-bottom: 2em;
-    font-size: fontSizeScale(20, 30);
+    font-size: var(--font-size-body);
 
     li {
         padding-left: .5em;
@@ -127,8 +119,8 @@ ul {
 }
 
 p {
-    font-size: fontSizeScale(20, 30);
-    line-height: 1.6;
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
     color: var(--color-text);
     margin-bottom: 1em;
 }

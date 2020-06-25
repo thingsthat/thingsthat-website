@@ -1,7 +1,6 @@
 import '~/scss/reset.scss'; 
 import '~/scss/root.scss'; 
-import '~/scss/styles.scss'; 
-import '~/scss/content.scss';
+import '~/scss/styles.scss';
 
 import DefaultLayout from '~/layouts/Default.vue';
 import HeaderBar from '~/components/HeaderBar.vue';

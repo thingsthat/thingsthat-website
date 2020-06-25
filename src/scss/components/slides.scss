@@ -2,7 +2,7 @@
     position: relative;
     border: 0;
   
-    .slides__items {
+    &__items {
         overflow: hidden;
         height: 65vh;
         min-height: 700px;
@@ -20,16 +20,16 @@
     }
 
     h2 {
-        font-size: fontSizeScale(20, 30);
+        font-size: var(--font-size-body);
         font-weight: 500;
-        margin-bottom: 0;
+        margin: 0;
     }
 
-    .video {
+    &__video {
         position: absolute;
         top: 0;
-        left: sizeScale(20, 30);
-        right: sizeScale(20, 30);
+        left: var(--padding);
+        right: var(--padding);
         bottom: 0;
         display: none;
         overflow: hidden;
@@ -52,21 +52,11 @@
         }
     }
 
-    .static {
+    &__image {
         position: absolute;
         top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        display: none;
-        overflow: hidden;
-    }
-
-    .image {
-        position: absolute;
-        top: 0;
-        left: sizeScale(20, 30);
-        right: sizeScale(20, 30);
+        left: var(--padding);
+        right: var(--padding);
         bottom: 0;
         background: #000;
         display: none;

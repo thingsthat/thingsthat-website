@@ -6,4 +6,26 @@
     /** Colours **/
     --color-text: #fff;
     --color-background: #000;
+
+    --font-size-logo: #{fontSizeScale(30, 40)};
+
+    --font-size-body: #{fontSizeScale(22, 30)};
+    --font-size-medium: #{fontSizeScale(20, 25)};
+    --font-size-small: #{fontSizeScale(18, 20)};
+
+    --font-size-header: #{fontSizeScale(40, 50)};
+
+    --font-size-h1: #{fontSizeScale(40, 60)};
+    --font-size-h2: #{fontSizeScale(40, 60)};
+    --font-size-h3: #{fontSizeScale(35, 55)};
+    --font-size-h4: #{fontSizeScale(30, 50)};
+    --font-size-h5: #{fontSizeScale(25, 45)};
+
+    --line-height-body: 1.5;
+    --line-height-header: 1.3;
+
+    --padding: #{sizeScale(30, 40)};
+    --padding-small: #{sizeScale(10, 20)};
+    --padding-xsmall: #{sizeScale(5, 10)};
+
 }

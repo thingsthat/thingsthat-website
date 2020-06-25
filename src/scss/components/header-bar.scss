@@ -8,7 +8,7 @@ header {
     background: var(--color-background);
 
     .header__logo {
-        font-size: fontSizeScale(20, 30);
+        font-size: var(--font-size-logo);
         text-decoration: none;
         border: 0;
         font-weight: 500;

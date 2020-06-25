@@ -6,7 +6,11 @@ section.journal-list {
         .col {
             min-height: 500px;
             flex: 1;
-            margin-right: sizeScale(20, 40); 
+            margin-right: var(--padding); 
+
+            &:last-child {
+                margin-right: 0;
+            }
 
             @media only screen and (max-width: 680px) {
                 margin-right: 0;
@@ -14,12 +18,12 @@ section.journal-list {
 
             .item {
                 display: block;
-                font-size: fontSizeScale(15, 22);
-                margin-bottom: sizeScale(20, 40);
+                font-size: var(--font-size-small);
+                margin-bottom: var(--padding);
                 font-weight: 400;
                 text-decoration: none;
                 border: 0;
-                line-height: 1.4;
+                line-height: var(--line-height-body);
 
                 &:hover {
                     opacity: 1;
@@ -39,7 +43,7 @@ section.journal-list {
                 
                 figure {
                     background: #000;
-                    margin-bottom: sizeScale(10, 20);
+                    margin-bottom: var(--padding-small);
                     font-size: 0;
 
                     img {
@@ -51,8 +55,8 @@ section.journal-list {
 
                 strong {
                     display: block;
-                    margin-bottom: sizeScale(5, 10);
-                    font-size: fontSizeScale(20, 25);
+                    margin-bottom: var(--padding-xsmall);
+                    font-size: var(--font-size-medium);
                 }
             }
         }
