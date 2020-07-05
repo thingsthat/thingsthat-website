@@ -1,6 +1,8 @@
 # Things & That Website
 
-This is our main website, a simple and clean static website using Gridsome.
+A simple and clean static website using Gridsome.
+
+[![CircleCI](https://circleci.com/gh/thingsthat/thingsthat-website.svg?style=svg)](https://circleci.com/gh/thingsthat/thingsthat-website)
 
 ### Getting Started
 ```

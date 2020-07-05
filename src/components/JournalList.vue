@@ -4,15 +4,15 @@
             <h2>Blog</h2>
             
             <div class="journal-list__list">
-                <div v-for="(item, index) in cols" :key="index" class="col">
-                    <a v-for="(item2, index2) in cols[index]" :key="index2" :href="`https://thingsthat.unalike.net${item2.path}`" class="item" target="_blank">
-                        <figure v-if="item2.meta.media">
-                            <img loading="lazy" :src="item2.meta.media.content.data.url">
+                <div v-for="(col, colindex) in cols" :key="colindex" class="col">
+                    <a v-for="(item, index) in cols[colindex]" :key="index" :href="`https://thingsthat.unalike.net${item.path}`" class="item" target="_blank">
+                        <figure v-if="item.meta.media && item.meta.media.content">
+                            <img loading="lazy" :src="item.meta.media.content.data.url">
                         </figure>
 
                         <div class="label">
-                            <strong>{{ item2.meta.title }}</strong>
-                            {{ item2.meta.summary }}
+                            <strong>{{ item.meta.title }}</strong>
+                            {{ item.meta.summary }}
                         </div>
                     </a>
                 </div>
@@ -32,8 +32,7 @@ export default {
     data() {
         return {
             cols: [],
-            items: [
-            ],
+            items: [],
         };
     },
     async mounted() {
