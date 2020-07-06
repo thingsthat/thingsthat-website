@@ -36,7 +36,7 @@ jobs:
 
       - run:
           name: deploy to S3
-          command: aws s3 sync dist/ s3://thingsthat.com --region eu-west-1
+          command: aws s3 sync dist/ s3://thingsthat.com --region eu-west-1 --delete
 
       - run:
           name: invalidate cloudfront
