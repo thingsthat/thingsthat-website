@@ -52,7 +52,7 @@ export default {
                     }
                 }`, {
                     pageSize: 20,
-                    sortBy: 'firstPublishedAt',
+                    sortBy: 'publishedAt',
                     sortDirection: 'DESC',
                     type: ['articlemedia', 'article'],
                 });
