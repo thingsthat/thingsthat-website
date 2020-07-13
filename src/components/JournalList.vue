@@ -44,7 +44,7 @@ export default {
                 const client = new Unalike();
                 client.setApi('https://thingsthat.unalike.net/api/');
 
-                const response = await client.query(`query contents($pageSize: Int, $sortBy: String, $sortDirection: String, $type: [String]) {
+                const response = await client.query(`query contents($pageSize: Int, $sortBy: String, $sortDirection: SortDirection, $type: [String]) {
                     contents(pageSize: $pageSize, sortBy: $sortBy, sortDirection: $sortDirection, type: $type) {
                         id
                         meta
