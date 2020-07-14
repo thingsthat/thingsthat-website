@@ -3,19 +3,20 @@ html {
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     -webkit-box-sizing: border-box;
-    box-sizing: border-box
+    box-sizing: border-box;
+    height: 100%;
 }
 
 * {
-    margin:0;
-    padding:0;
+    margin: 0;
+    padding: 0;
 }
 
 *,
-:before,
-:after {
+::before,
+::after {
     -webkit-box-sizing: inherit;
-    box-sizing: inherit
+    box-sizing: inherit;
 }
 
 html,
@@ -90,8 +91,8 @@ body {
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 article,
@@ -128,7 +129,7 @@ ol,
 p,
 table,
 ul {
-    margin: 0 0 0;
+    margin: 0;
 }
 
 a,
@@ -213,9 +214,5 @@ ul,
 var,
 video {
     border: 0;
-    background: 0 0
-}
-
-html{
-    height: 100%;
+    background: 0;
 }
