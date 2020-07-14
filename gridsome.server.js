@@ -2,8 +2,6 @@ const fs = require('fs');
 const _ = require('lodash');
 
 module.exports = function(api) {
-
-    let homeDocs;
     
     api.loadSource(async ({addCollection, addSchemaTypes, schema}) => {
 
@@ -53,8 +51,8 @@ module.exports = function(api) {
         `);
 
         // Different document types
-        homeDocs = addCollection('Home');
-
+        const homeDocs = addCollection('Home');
+        
         const contents = JSON.parse(fs.readFileSync('content.json'));
 
         for (const content of Object.values(contents)) {
@@ -69,12 +67,8 @@ module.exports = function(api) {
                         data: content.data,
                     };
         
-                    if (homeDocs.getNodeById(node.id)) {
-                        homeDocs.updateNode(node);
-                    } else {
-                        homeDocs.addNode(node);
-                    }
-
+                    homeDocs.addNode(node);
+                    
                     break;
 
             }
