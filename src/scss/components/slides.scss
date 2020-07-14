@@ -1,7 +1,7 @@
 .slides {
     position: relative;
     border: 0;
-  
+
     &__items {
         overflow: hidden;
         height: 65vh;
@@ -35,7 +35,7 @@
         overflow: hidden;
 
         video {
-            min-width: 100%; 
+            min-width: 100%;
             min-height: 100%;
             width: auto;
             height: auto;

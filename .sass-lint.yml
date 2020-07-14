@@ -1,7 +1,7 @@
 options:
   formatter: stylish
 files:
-  include: 'public/**/*.s+(a|c)ss'
+  include: 'src/**/*.s+(a|c)ss'
 rules:
   class-name-format:
     - 2
