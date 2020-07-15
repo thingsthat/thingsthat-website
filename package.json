@@ -9,7 +9,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@createunalike/unalike-js": "^0.13.3",
+    "@createunalike/unalike-js": "^0.14.1",
     "granim": "^2.0.0",
     "gridsome": "^0.7.5"
   },
