@@ -2,7 +2,7 @@
 
 A simple and clean static website using Gridsome.
 
-[![CircleCI](https://circleci.com/gh/thingsthat/thingsthat-website.svg?style=svg)](https://circleci.com/gh/thingsthat/thingsthat-website)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ca9a2225-6566-418b-9bcb-a44b3e3dcfd2/deploy-status)](https://app.netlify.com/sites/thingsthat-website/deploys)
 
 ### Getting Started
 ```
