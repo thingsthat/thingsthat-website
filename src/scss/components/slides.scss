@@ -33,6 +33,7 @@
         bottom: 0;
         display: none;
         overflow: hidden;
+        background: rgba(255, 255, 255, .2);
 
         video {
             min-width: 100%;
@@ -58,7 +59,7 @@
         left: var(--padding);
         right: var(--padding);
         bottom: 0;
-        background: #000;
+        background: rgba(255, 255, 255, .2);
         display: none;
 
         div {

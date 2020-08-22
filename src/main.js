@@ -16,5 +16,7 @@ export default function(Vue, {appOptions, router, head, isClient}) {
     Vue.component('FooterBar', FooterBar);
     Vue.component('Slides', Slides);
     Vue.component('Contact', Contact);
+
+    console.log(navigator);
     
 }

@@ -13,7 +13,7 @@
                 <div class="inner" v-html="$page.home.data.body" />
             </section>
 
-            <Slides v-for="(project, index) in $page.home.data.projects" :key="index" :data-name="project.name" :slides="project.slides">
+            <Slides v-for="(project, index) in $page.home.data.projects" :key="index" :data-name="project.name" :default="project.default" :slides="project.slides">
                 <template v-slot:header>
                     <h2>{{ project.title }}</h2>
                 </template>
