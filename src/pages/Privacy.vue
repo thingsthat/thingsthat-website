@@ -4,7 +4,7 @@
         <main>
             <section>
                 <div class="inner">
-                    <h2>Privacy and Cookies Policy</h2>
+                    <h2>Privacy Policy</h2>
 
                     <p>At Things &amp; That we have the following principles when it comes to privacy...</p>
 
