@@ -36,7 +36,7 @@
                         It also defines how we interact with other companies, who we choose to partner with, and what platforms we choose to build on.
                     </p>
 
-                    <p>Effective date: June 10, 2020</p>
+                    <p>Effective date: August 23, 2020</p>
 
                     <h2>Privacy Policy</h2>
                                     
@@ -96,21 +96,6 @@
 
                     <h5>Usage Data</h5>
                     <p>We may also collect information how the Service is accessed and used ("Usage Data"). This Usage Data may include information such as your computer's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that you visit, the time and date of your visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
-
-                    <h5>Location Data</h5>
-                    <p>We may use and store information about your location if you give us permission to do so (“Location Data”). We use this data to provide features of our Service, to improve and customize our Service.</p>
-                    <p>You can enable or disable location services when you use our Service at any time, through your device settings.</p>
-
-                    <h5>Tracking &amp; Cookies Data</h5>
-                    <p>We use cookies and similar tracking technologies to track the activity on our Service and hold certain information.</p>
-                    <p>Cookies are files with small amount of data which may include an anonymous unique identifier. Cookies are sent to your browser from a website and stored on your device. Tracking technologies also used are beacons, tags, and scripts to collect and track information and to improve and analyze our Service.</p>
-                    <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Service.</p>
-                    <p>Examples of Cookies we use:</p>
-                    <ul>
-                        <li><strong>Session Cookies.</strong> We use Session Cookies to operate our Service.</li>
-                        <li><strong>Preference Cookies.</strong> We use Preference Cookies to remember your preferences and various settings.</li>
-                        <li><strong>Security Cookies.</strong> We use Security Cookies for security purposes.</li>
-                    </ul>
 
                     <h3>Use of Data</h3> 
                     <p>Things &amp; That uses the collected data for various purposes:</p>    
@@ -194,20 +179,9 @@
                     <p>We may use third-party Service Providers to monitor and analyze the use of our Service.</p>    
 
                     <h5>Fathom Analytics</h5>
-                    <p>We may use a privacy-focused third-party Service Provider called Fathom Analytics to monitor and analyse the use of our Service.</p>
+                    <p>We may use a privacy-focused third-party Service Provider called Fathom Analytics to monitor and analyse the use of our Service without the use of tracking cookies.</p>
                     <p>Their Privacy Policy can be viewed at <a href="https://usefathom.com/privacy">https://usefathom.com/privacy</a></p>
-                    
-                    <h4>Payments</h4>
-                    <p>We may provide paid products and/or services within the Service. In that case, we use third-party services for payment processing (e.g. payment processors).</p>
-                    <p>We will not store or collect your payment card details. That information is provided directly to our third-party payment processors whose use of your personal information is governed by their Privacy Policy. These payment processors adhere to the standards set by PCI-DSS as managed by the PCI Security Standards Council, which is a joint effort of brands like Visa, Mastercard, American Express and Discover. PCI-DSS requirements help ensure the secure handling of payment information.</p>
-                    <p>The payment processors we work with are:</p>
-
-                    <h5>Stripe</h5>
-                    <p>Their Privacy Policy can be viewed at <a href="https://stripe.com/gb/privacy">https://stripe.com/gb/privacy</a></p>
-
-                    <h5>PayPal</h5>
-                    <p>Their Privacy Policy can be viewed at <a href="https://www.paypal.com/uk/webapps/mpp/ua/privacy-full">https://www.paypal.com/uk/webapps/mpp/ua/privacy-full</a></p>
-
+                
                     <h3>Links to Other Sites</h3>
                     <p>Our Service may contain links to other sites that are not operated by us. If you click on a third party link, you will be directed to that third party's site. We strongly advise you to review the Privacy Policy of every site you visit.</p>
                     <p>We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
@@ -220,56 +194,6 @@
                     <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.</p>
                     <p>We will let you know via email and/or a prominent notice on our Service, prior to the change becoming effective and update the "effective date" at the top of this Privacy Policy.</p>
                     <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.</p>
-
-                    <h2>Cookies Policy</h2>
-
-                    <p>Things &amp; That ("us", "we", or "our") uses cookies on the http://thingsthat.com website (the "Service"). By using the Service, you consent to the use of cookies.</p>
-                    <p>Our Cookies Policy explains what cookies are, how we use cookies, how third-parties we may partner with may use cookies on the Service, your choices regarding cookies and further information about cookies.</p>
-
-                    <h3>What are cookies</h3>
-                    <p>Cookies are small pieces of text sent to your web browser by a website you visit. A cookie file is stored in your web browser and allows the Service or a third-party to recognize you and make your next visit easier and the Service more useful to you.</p>
-                    <p>Cookies can be "persistent" or "session" cookies. Persistent cookies remain on your personal computer or mobile device when you go offline, while session cookies are deleted as soon as you close your web browser.</p>
-
-                    <h3>How Things &amp; That uses cookies</h3>
-                    <p>When you use and access the Service, we may place a number of cookies files in your web browser.</p>
-                    <p>We use cookies for the following purposes:</p>
-
-                    <ul>
-                        <li>To enable certain functions of the Service</li>
-                        <li>To provide analytics</li>
-                        <li>To store your preferences</li>
-                    </ul>
-
-                    <p>We use both session and persistent cookies on the Service and we use different types of cookies to run the Service:</p>
-
-                    <ul>
-                        <li>Essential cookies. We may use cookies to remember information that changes the way the Service behaves or looks, such as a user's language preference on the Service.</li>
-                        <li>Accounts-related cookies. We may use accounts-related cookies to authenticate users and prevent fraudulent use of user accounts. We may use these cookies to remember information that changes the way the Service behaves or looks, such as the "remember me" functionality.</li>
-                        <li>Analytics cookies. We may use analytics cookies to track information how the Service is used so that we can make improvements. We may also use analytics cookies to test new advertisements, pages, features or new functionality of the Service to see how our users react to them.</li>
-                    </ul>
-
-                    <h3>Third-party cookies</h3>
-                    <p>In addition to our own cookies, we may also use various third-parties cookies to report usage statistics of the Service, deliver advertisements on and through the Service, and so on.</p>
-
-                    <h3>What are your choices regarding cookies</h3>
-                    <p>If you'd like to delete cookies or instruct your web browser to delete or refuse cookies, please visit the help pages of your web browser.</p>
-                    <p>Please note, however, that if you delete cookies or refuse to accept them, you might not be able to use all of the features we offer, you may not be able to store your preferences, and some of our pages might not display properly.</p>
-
-                    <ul>
-                        <li>For the Chrome web browser, please visit this page from Google: <a href="https://support.google.com/accounts/answer/32050">https://support.google.com/accounts/answer/32050</a></li>
-                        <li>For the Internet Explorer web browser, please visit this page from Microsoft: <a href="http://support.microsoft.com/kb/278835">http://support.microsoft.com/kb/278835</a></li>
-                        <li>For the Firefox web browser, please visit this page from Mozilla: <a href="https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored">https://support.mozilla.org/en-US/kb/delete-cookies-remove-info-websites-stored</a></li>
-                        <li>For the Safari web browser, please visit this page from Apple: <a href="https://support.apple.com/kb/PH21411?locale=en_US">https://support.apple.com/kb/PH21411?locale=en_US</a></li>
-                        <li>For any other web browser, please visit your web browser's official web pages.</li>
-                    </ul>
-
-                    <h3>Where can you find more information about cookies</h3>
-                    <p>You can learn more about cookies and the following third-party websites:</p>
-
-                    <ul>
-                        <li>AllAboutCookies: <a href="http://www.allaboutcookies.org/">http://www.allaboutcookies.org/</a></li>
-                        <li>Network Advertising Initiative: <a href="http://www.networkadvertising.org/">http://www.networkadvertising.org/</a></li>
-                    </ul>         
 
                     <h2>How to contact us</h2>       
                     <p>Under the UK Data Protection Act 1998 we have to say who the ‘data controller’ is for our sites and services. The data controller is the organisation responsible for protecting information and, in our case, is Things That Ltd, First Floor, Telecom House, 125-135 Preston Road, Brighton, England, BN1 6AF.</p>
