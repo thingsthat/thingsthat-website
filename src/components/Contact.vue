@@ -4,8 +4,8 @@
             <h2>Say hello</h2>
 
             <p>
-                If you'd like to work with me, hire me freelance, debate the future of technology over a beer 🍺, or pet my dog Rocket 🚀
-                please contact me at <a href="mailto:hello@thingsthat.com" target="_blank">hello@thingsthat.com</a>, stalk me on...
+                If you'd like to work with me, debate the future of technology over a beer 🍺, or pet my dog Rocket 🚀
+                please contact me at <a href="mailto:hello@thingsthat.com" target="_blank">hello@thingsthat.com</a>. Or you can stalk me on...
 
                 <a href="https://www.instagram.com/thgsthat/" target="_blank">Instagram</a> / 
                 <a href="https://www.facebook.com/thgsthat/" target="_blank">Facebook</a> / 

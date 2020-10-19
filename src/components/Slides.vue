@@ -3,7 +3,7 @@
         <div class="slides__head inner">
             <slot name="header" />
         </div>
-        <div v-if="lazyShow && slides" class="slides__items inner">
+        <div v-if="slides" class="slides__items inner">
             <div v-for="(item, index) in slides" :key="index" :class="[current == index ? 'current' : null, `slides__${item.type}`]">
                 <div v-if="item.type == 'video'">
                     <video autoplay muted loop playsinline disableremoteplayback>
@@ -12,11 +12,6 @@
                     </video> 
                 </div>
                 <div v-if="item.type == 'image'" :style="`background-image: url(${item.src});`" />
-            </div>
-        </div>
-        <div v-if="!lazyShow && defaultImage" class="slides__items inner">
-            <div class="current slides__image">
-                <div :style="`background-image: url(${defaultImage});`" />
             </div>
         </div>
         <div class="slides__foot inner">
@@ -31,10 +26,6 @@ import '~/scss/components/slides.scss';
 
 export default {
     props: {
-        defaultImage: {
-            type: String,
-            default: null,
-        },
         slides: {
             type: Array,
             default: null,
@@ -43,7 +34,6 @@ export default {
     data() {
         return {
             current: 0,
-            lazyShow: false,
         };
     },
     mounted() {
@@ -66,8 +56,6 @@ export default {
             this.scrollListener = window.addEventListener('scroll', () => {
 
                 if (this.$el.offsetTop > window.scrollY - window.innerHeight + 400) {
-                    this.lazyShow = true;
-                    
                     if (this.scrollListener) {
                         window.removeEventListener(this.scrollListener);
                         this.scrollListener = null;

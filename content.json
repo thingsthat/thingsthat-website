@@ -5,7 +5,7 @@
         "data": {
             "title": "Things & That - Product design and development.",
             "header": "Building independent media products and services, and helping others do the same",
-            "body": "<p>Hello, I'm a London based maker of products and services. In a world of ever confusing media and technology, Things &amp; That helps brands, agencies, and individuals meet the future head-on with ethical and privacy-focused product design, development and insights. Future-enabling everyone.</p><p>Specialising in scalable e-commerce, content management and publishing, live video and streaming services, interactive media and audio.</p>",
+            "body": "<p>Hello, I'm a London based maker and breaker of things, helping brands, agencies, and individuals meet the future head-on with ethical and privacy-focused design, development and insights. Future-enabling everyone in an ever confusing world.</p><p>Specialising in publishing, content management, community platforms, live video and streaming services, and interactive media.</p>",
             "projects": [
                 {
                     "name": "unalike",
@@ -23,7 +23,7 @@
                             }
                         }
                     ]
-                }
+                },
             ]
         }
     }
