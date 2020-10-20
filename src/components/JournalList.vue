@@ -42,7 +42,7 @@ export default {
             try {
 
                 const client = new Unalike();
-                client.setApi('https://thingsthat.unalike.net/api/');
+                client.setApi('https://thingsthat.unalike.net/api');
 
                 const response = await client.query(`query contents($pageSize: Int, $sortBy: String, $sortDirection: SortDirection, $type: [String]) {
                     contents(pageSize: $pageSize, sortBy: $sortBy, sortDirection: $sortDirection, type: $type) {
@@ -54,7 +54,7 @@ export default {
                     pageSize: 20,
                     sortBy: 'publishedAt',
                     sortDirection: 'DESC',
-                    type: ['articlemedia', 'article'],
+                    type: ['story'],
                 });
 
                 this.items = response.data.contents.filter((item) => item.meta);
