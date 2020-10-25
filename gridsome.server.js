@@ -36,6 +36,7 @@ module.exports = function(api) {
                 summary: String
                 url: String
                 label: String
+                defaultimage: String
                 slides: [ProjectSlide]
             }
 

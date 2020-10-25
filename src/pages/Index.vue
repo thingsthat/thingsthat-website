@@ -13,11 +13,11 @@
                 <div class="inner" v-html="$page.home.data.body" />
             </section>
 
-            <Slides v-for="(project, index) in $page.home.data.projects" :key="index" :data-name="project.name" :default="project.default" :slides="project.slides">
-                <template v-slot:header>
+            <Slides v-for="(project, index) in $page.home.data.projects" :key="index" :data-name="project.name" :loadingimage="project.loadingimage" :slides="project.slides">
+                <template #header>
                     <h2>{{ project.title }}</h2>
                 </template>
-                <template v-slot:footer>
+                <template #footer>
                     <p>{{ project.summary }}</p>
                     <p class="link"><a :href="project.url" target="_blank">{{ project.label }}</a></p>
                 </template>
@@ -47,6 +47,7 @@ query {
                 summary
                 url
                 label
+                defaultimage
                 slides {
                     type
                     src {

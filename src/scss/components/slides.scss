@@ -7,7 +7,8 @@
         height: 65vh;
         min-height: 700px;
         max-height: 800px;
-        padding: 0;
+        padding-top: 0;
+        padding-bottom: 0;
 
         @media only screen and (max-width: 1024px) {
             height: 60vw;
@@ -33,10 +34,9 @@
         bottom: 0;
         display: none;
         overflow: hidden;
-        background: rgba(255, 255, 255, .2);
 
         video {
-            min-width: 100%;
+            min-width: 101%;
             min-height: 100%;
             width: auto;
             height: auto;
@@ -59,7 +59,6 @@
         left: var(--padding);
         right: var(--padding);
         bottom: 0;
-        background: rgba(255, 255, 255, .2);
         display: none;
 
         div {
