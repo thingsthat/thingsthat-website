@@ -47,7 +47,7 @@ query {
                 summary
                 url
                 label
-                defaultimage
+                loadingimage
                 slides {
                     type
                     src {
