@@ -4,7 +4,7 @@
             <slot name="header" />
         </div>
         <div v-if="slides" class="slides__items inner">
-            <div v-for="(item, index) in slides" :key="index" :class="[current == index ? 'current' : null, `slides__${item.type}`]" :style="`background-image: url(${loadingimage});`">
+            <div v-for="(item, index) in slides" :key="index" class="slides__item" :class="[current == index ? 'current' : null, `slides__${item.type}`]" :style="`background-image: url(${loadingimage});`">
                 <div v-if="item.type == 'video'">
                     <video autoplay muted loop playsinline disableremoteplayback>
                         <source v-if="item.src.webm" :src="item.src.webm" type="video/webm">

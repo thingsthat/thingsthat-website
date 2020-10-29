@@ -3,10 +3,8 @@
     border: 0;
 
     &__items {
-        overflow: hidden;
-        height: 65vh;
+        height: 50vw;
         min-height: 700px;
-        max-height: 800px;
         padding-top: 0;
         padding-bottom: 0;
 
@@ -16,8 +14,9 @@
         }
     }
 
-    div {
-        overflow: hidden;
+    &__item {
+        background-position: center;
+        background-size: cover;
     }
 
     h2 {
