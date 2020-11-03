@@ -8,7 +8,6 @@
                 please contact me at <a href="mailto:hello@thingsthat.com" target="_blank">hello@thingsthat.com</a>. Or you can stalk me on...
 
                 <a href="https://www.instagram.com/thgsthat/" target="_blank">Instagram</a> / 
-                <a href="https://www.facebook.com/thgsthat/" target="_blank">Facebook</a> / 
                 <a href="https://www.linkedin.com/company/thingsthat" target="_blank">LinkedIn</a> / 
                 <a href="https://github.com/thingsthat" target="_blank">Github</a><br>
             </p>
