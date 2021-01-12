@@ -21,15 +21,6 @@
                 </template>
             </Slides>
 
-            <section>
-                <div class="inner">
-                    <h2>What I do</h2>
-                    <p>
-                        Progressive web apps, high performant back-end applications, scalable serverless architecture, modern headless content management, and Shopify commerce websites.
-                    </p>
-                </div>
-            </section>
-
             <Contact />
 
             <JournalList />
