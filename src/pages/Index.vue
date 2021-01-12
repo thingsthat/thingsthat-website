@@ -1,16 +1,14 @@
 <template>
     <DefaultLayout>
-        <BackgroundJunePride ref="background" />
         <HeaderBar />
         <main id="home">
-            <section data-name="default">
+            <section>
                 <div class="inner">
-                    <h1>{{ $page.home.data.header }}</h1>
+                    <h1>
+                        Hello, I'm a London based freelance product designer and developer, crafting digital media products and services.<br><br>
+                        Helping people meet the future head-on, so they can always be creating. Specialising in scalable content management and publishing, e-commerce, live streaming and realtime applications, video and audio.
+                    </h1>
                 </div>
-            </section>
-
-            <section data-name="default">
-                <div class="inner" v-html="$page.home.data.body" />
             </section>
 
             <Slides v-for="(project, index) in $page.home.data.projects" :key="index" :data-name="project.name" :loadingimage="project.loadingimage" :slides="project.slides">
@@ -22,12 +20,22 @@
                     <p class="link"><a :href="project.url" target="_blank">{{ project.label }}</a></p>
                 </template>
             </Slides>
-        
-            <Contact data-name="default" />
 
-            <JournalList data-name="default" />
+            <section>
+                <div class="inner">
+                    <h2>What I do</h2>
+                    <p>
+                        Progressive web apps, high performant back-end applications, scalable serverless architecture, modern headless content management, and Shopify commerce websites.
+                    </p>
+                </div>
+            </section>
 
-            <FooterBar data-name="default" />
+
+            <Contact />
+
+            <JournalList />
+
+            <FooterBar />
         </main>
     </DefaultLayout>
 </template>
@@ -38,9 +46,6 @@ query {
     home(path: "/home") {
         id
         data {
-            title
-            header
-            body
             projects {
                 name
                 title
@@ -67,12 +72,11 @@ query {
 import '~/scss/home.scss';
 
 import JournalList from '../components/JournalList.vue';
-import BackgroundJunePride from '../components/BackgroundJunePride.vue';
 
 export default {
     metaInfo() {
         return {
-            title: this.$page.home.data.title,
+            title: 'Things & That - Product design and development.',
             meta: [
                 {name: 'description', content: ''},
             ],
@@ -80,7 +84,6 @@ export default {
     },
     components: {
         JournalList,
-        BackgroundJunePride,
     },
 };
 

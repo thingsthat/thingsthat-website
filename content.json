@@ -3,9 +3,6 @@
         "id": "home",
         "type": "home",
         "data": {
-            "title": "Things & That - Product design and development.",
-            "header": "Building independent media products and services, and helping others do the same",
-            "body": "<p>Hello, I'm a London based maker and breaker of things, helping brands, agencies, and individuals meet the future head-on with ethical and privacy-focused design, development and insights. Future-enabling everyone in an ever confusing world.</p><p>Specialising in publishing, content management, community platforms, live video and streaming services, and interactive media.</p>",
             "projects": [
                 {
                     "name": "unalike",
@@ -23,7 +20,7 @@
                             }
                         }
                     ]
-                }
+                },
             ]
         }
     }

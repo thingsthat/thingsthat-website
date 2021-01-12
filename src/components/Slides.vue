@@ -1,21 +1,23 @@
 <template>
     <section class="slides">
-        <div class="slides__head inner">
-            <slot name="header" />
-        </div>
-        <div v-if="slides" class="slides__items inner">
-            <div v-for="(item, index) in slides" :key="index" class="slides__item" :class="[current == index ? 'current' : null, `slides__${item.type}`]" :style="`background-image: url(${loadingimage});`">
-                <div v-if="item.type == 'video'">
-                    <video autoplay muted loop playsinline disableremoteplayback>
-                        <source v-if="item.src.webm" :src="item.src.webm" type="video/webm">
-                        <source v-if="item.src.mp4" :src="item.src.mp4" type="video/mp4">
-                    </video> 
-                </div>
-                <div v-if="item.type == 'image'" :style="`background-image: url(${item.src});`" />
+        <div class="inner">
+            <div class="slides__head">
+                <slot name="header" />
             </div>
-        </div>
-        <div class="slides__foot inner">
-            <slot name="footer" />
+            <div v-if="slides" class="slides__items">
+                <div v-for="(item, index) in slides" :key="index" class="slides__item" :class="[current == index ? 'current' : null, `slides__${item.type}`]" :style="`background-image: url(${loadingimage});`">
+                    <div v-if="item.type == 'video'">
+                        <video autoplay muted loop playsinline disableremoteplayback>
+                            <source v-if="item.src.webm" :src="item.src.webm" type="video/webm">
+                            <source v-if="item.src.mp4" :src="item.src.mp4" type="video/mp4">
+                        </video> 
+                    </div>
+                    <div v-if="item.type == 'image'" :style="`background-image: url(${item.src});`" />
+                </div>
+            </div>
+            <div class="slides__foot">
+                <slot name="footer" />
+            </div>
         </div>
     </section>
 </template>

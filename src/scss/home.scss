@@ -1,4 +1,11 @@
 #home {
+
+    h1 {
+        margin-bottom: 1em;
+        font-size: var(--font-size-h1);
+        line-height: 1.5;
+    }
+
     footer {
         bottom: 0;
         margin-bottom: 0;

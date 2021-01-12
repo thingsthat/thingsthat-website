@@ -1,0 +1,20 @@
+.contact {
+    .pop {
+        cursor: pointer;
+    }
+
+    .pop-up {
+        width: 300px;
+        height: 300px;
+        position: absolute;
+        top: 200px;
+        pointer-events: none;
+
+        div {
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 300px;
+            height: 300px;
+        }
+    }
+}

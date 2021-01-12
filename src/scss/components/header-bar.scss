@@ -14,4 +14,11 @@ header {
         font-weight: 500;
         color: var(--color-text);
     }
+
+    .inner {
+        padding-top: var(--padding-small);
+        padding-bottom: var(--padding-small);
+        padding-left: var(--padding);
+        padding-right: var(--padding);
+    }
 }

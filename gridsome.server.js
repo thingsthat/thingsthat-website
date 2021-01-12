@@ -24,9 +24,6 @@ module.exports = function(api) {
             }
 
             type HomeData {
-                title: String
-                header: String
-                body: String
                 projects: [Project]
             }
 

@@ -1,7 +1,7 @@
 <template>
     <section v-if="items.length > 0" class="journal-list">
         <div class="inner">
-            <h2>Blog</h2>
+            <h2>Journal</h2>
             
             <div class="journal-list__list">
                 <div v-for="(col, colindex) in cols" :key="colindex" class="col">

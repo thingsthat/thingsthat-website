@@ -13,8 +13,7 @@
         "plugin:vue/recommended"
     ],
     "globals": {
-        "window": true,
-        "ENV_VALUES": true
+        "window": true
     },
     "plugins": [
       "vue"

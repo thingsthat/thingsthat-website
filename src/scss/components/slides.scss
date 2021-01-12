@@ -2,16 +2,19 @@
     position: relative;
     border: 0;
 
+    &__head {
+        margin-bottom: var(--padding);
+    }
+
+    &__foot {
+        margin-top: var(--padding);
+    }
+
     &__items {
-        height: 50vw;
-        min-height: 700px;
+        height: sizeScale(300, 600);
         padding-top: 0;
         padding-bottom: 0;
-
-        @media only screen and (max-width: 1024px) {
-            height: 60vw;
-            min-height: auto;
-        }
+        position: relative;
     }
 
     &__item {
@@ -20,7 +23,7 @@
     }
 
     h2 {
-        font-size: var(--font-size-body);
+        font-size: var(--font-size-h2);
         font-weight: 500;
         margin: 0;
     }
@@ -28,8 +31,8 @@
     &__video {
         position: absolute;
         top: 0;
-        left: var(--padding);
-        right: var(--padding);
+        left: 0;
+        right: 0;
         bottom: 0;
         display: none;
         overflow: hidden;
@@ -55,8 +58,8 @@
     &__image {
         position: absolute;
         top: 0;
-        left: var(--padding);
-        right: var(--padding);
+        left: 0;
+        right: 0;
         bottom: 0;
         display: none;
 

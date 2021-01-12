@@ -2,7 +2,7 @@
     <footer>
         <div class="inner">
             <div class="left">
-                &copy; 2020 Things That Ltd. All rights reserved. <g-link to="/privacy">Privacy</g-link> <g-link to="/colophon">Colophon</g-link>
+                &copy; 2021 Things That Ltd. All rights reserved. <g-link to="/privacy">Privacy</g-link> <g-link to="/colophon">Colophon</g-link>
             </div>
             <div class="right">
                 Made in the UK

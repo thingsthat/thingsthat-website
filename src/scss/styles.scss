@@ -27,7 +27,8 @@ a {
 
     @media only screen and (min-width: 680px) {
         &:hover {
-            opacity: .8;
+            color: #00f;
+            border-bottom-color: #00f;
         }
     }
 }
@@ -56,13 +57,14 @@ main {
 main {
     width: 100vw;
     min-height: 100vh;
+    max-width: sizeScale(400, 1300);
     position: relative;
     margin: 0 auto;
 }
 
 .inner {
     margin: 0 auto;
-    padding: var(--padding);
+    padding: sizeScale(80, 120) var(--padding);
     position: relative;
     width: 100%;
 }
@@ -129,19 +131,4 @@ hr {
     border: 1px solid #d0d0d0;
     width: 100%;
     margin: 0 auto;
-}
-
-.background-fixed {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-.background-full {
-    width: 100vw;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
