@@ -1,9 +1,21 @@
 #home {
 
-    h1 {
-        margin-bottom: 1em;
-        font-size: var(--font-size-h1);
-        line-height: 1.5;
+    section:first-child {
+
+        h1 {
+            margin-bottom: 1em;
+            font-size: var(--font-size-h1);
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        p {
+            margin-bottom: 1em;
+            font-size: var(--font-size-h1);
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
     }
 
     footer {

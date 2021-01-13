@@ -1,4 +1,3 @@
-const fs = require('fs');
 const _ = require('lodash');
 
 module.exports = function(api) {
@@ -15,63 +14,6 @@ module.exports = function(api) {
         });
 
         api._app.config = newConfig;
-
-        // Add schema for home content.
-        addSchemaTypes(`
-            type Home implements Node {
-                id: String
-                data: HomeData
-            }
-
-            type HomeData {
-                projects: [Project]
-            }
-
-            type Project {
-                name: String
-                title: String
-                summary: String
-                url: String
-                label: String
-                loadingimage: String
-                slides: [ProjectSlide]
-            }
-
-            type ProjectSlide {
-                type: String
-                src: ProjectSlideSrc
-            }
-
-            type ProjectSlideSrc {
-                webm: String
-                mp4: String
-                image: String
-            }
-        `);
-
-        // Different document types
-        const homeDocs = addCollection('Home');
-        
-        const contents = JSON.parse(fs.readFileSync('content.json'));
-
-        for (const content of Object.values(contents)) {
-                
-            switch (content.type) {
-                case 'home':
-        
-                    const node = {
-                        id: content.id,
-                        path: `/home`, 
-                        uid: content.id,
-                        data: content.data,
-                    };
-        
-                    homeDocs.addNode(node);
-                    
-                    break;
-
-            }
-        }
  
     });
 

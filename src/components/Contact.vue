@@ -13,13 +13,13 @@
                 please contact me at <a href="mailto:hello@thingsthat.com" target="_blank">hello@thingsthat.com</a>.
                 Or you can stalk me on...
 
-                <a href="https://www.instagram.com/thgsthat/" target="_blank">Instagram</a> / 
-                <a href="https://www.linkedin.com/company/thingsthat" target="_blank">LinkedIn</a> / 
-                <a href="https://github.com/thingsthat" target="_blank">Github</a>.
+                <a href="https://www.instagram.com/thgsthat/" target="_blank" class="external">Instagram</a>,
+                <a href="https://www.linkedin.com/company/thingsthat" target="_blank" class="external">LinkedIn</a>, and 
+                <a href="https://github.com/thingsthat" target="_blank" class="external">Github</a>.
             </p>
 
             <p>
-                Otherwise, once lockdown ends, you can visit me at my London office at Somerset House Exchange, Strand, London WC2R 1LA.
+                Otherwise, once lockdown ends, you can visit me at my London office at Somerset House Exchange, Strand, London WC2R 1LA. I'm a member of <a href="https://bima.co.uk/" class="external" target="_blank">BIMA</a> and a fellow of the <a href="https://www.thersa.org/" class="external" target="_blank">RSA</a>.
             </p>
         </div>
     </section>

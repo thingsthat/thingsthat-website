@@ -5,33 +5,24 @@
             <section>
                 <div class="inner">
                     <h1>
-                        Hello, I'm a London based product designer and developer. Crafting digital media products and services, and helping people meet the future head-on, so they can always be creating.<br><br>
-                        I also provide hands-on freelance development consultancy for agencies and brands, specialising in scalable content management and publishing, e-commerce, live streaming and realtime applications, video and audio, privacy, and data driven storytelling.
+                        Hello, I'm Jack, an independent freelance designer and developer, currently based in London. Specialising in content management, publishing, e-commerce, live streaming and realtime applications, video and audio, and storytelling.
                     </h1>
+
+                    <p>
+                        I'm a big fan of building products that are intuitive and fun, eliminating noise through good code and simple design. Alongside my product work, I write about and advocate for technology inclusion, privacy, and education.
+                    </p>
                 </div>
             </section>
 
-            <Slides v-for="(project, index) in $page.home.data.projects" :key="index" :data-name="project.name" :slides="project.slides">
+            <Slides v-for="(project, index) in projects" :key="index" :data-name="project.name" :slides="project.slides">
                 <template #header>
-                    <h2>{{ project.title }}</h2>
+                    <h3>{{ project.title }}</h3>
                 </template>
                 <template #footer>
                     <p>{{ project.summary }}</p>
-                    <p class="link"><a :href="project.url" target="_blank">{{ project.label }}</a>&#8599;</p>
+                    <p class="link"><a :href="project.url" target="_blank" class="external">{{ project.label }}</a></p>
                 </template>
             </Slides>
-
-            <section>
-                <div class="inner">
-                    <p>
-                        My method is minimalism. Not abstract minimalism, but simplicity that is functional and accessible, with a non-ideological view on technology stacks and an empathetic approach to user experience.
-                    </p>
-
-                    <p>
-                        I'm also a member of <a href="https://bima.co.uk/" target="_blank">BIMA</a>&#8599; and a fellow of the <a href="https://www.thersa.org/" target="_blank">RSA</a>&#8599;, with a passion for technology inclusion, privacy, and education.
-                    </p>
-                </div>
-            </section>
 
             <Contact />
 
@@ -87,6 +78,27 @@ export default {
     },
     components: {
         JournalList,
+    },
+    data() {
+        return {
+            projects: [
+                {
+                    'name': 'unalike',
+                    'title': 'Unalike. Giving stories a voice.',
+                    'summary': 'A publishing platform designed for writers, creators, journalists, and publishers, with tools that reimagine the way we create, publish, and own stories.',
+                    'url': 'https://www.unalike.net',
+                    'label': 'www.unalike.net',
+                    'slides': [
+                        {
+                            'type': 'image',
+                            'src': {
+                                'image': '/img/products/unalike/slide1.png',
+                            },
+                        },
+                    ],
+                },
+            ],
+        };
     },
 };
 
