@@ -7,7 +7,6 @@ import '~/scss/styles.scss';
 import DefaultLayout from '~/layouts/Default.vue';
 import HeaderBar from '~/components/HeaderBar.vue';
 import FooterBar from '~/components/FooterBar.vue';
-import Slides from '~/components/Slides.vue';
 import Contact from '~/components/Contact.vue';
 
 import dayjs from 'dayjs';
@@ -48,7 +47,6 @@ export default function(Vue, {appOptions, router, head, isClient}) {
 
     Vue.component('HeaderBar', HeaderBar);
     Vue.component('FooterBar', FooterBar);
-    Vue.component('Slides', Slides);
     Vue.component('Contact', Contact);
     
 }
