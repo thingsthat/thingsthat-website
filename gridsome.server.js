@@ -45,6 +45,7 @@ module.exports = function(api) {
             type ProjectSlideSrc {
                 webm: String
                 mp4: String
+                image: String
             }
         `);
 

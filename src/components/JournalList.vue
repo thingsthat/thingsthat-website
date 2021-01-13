@@ -6,12 +6,9 @@
             <div class="journal-list__list">
                 <div v-for="(col, colindex) in cols" :key="colindex" class="col">
                     <a v-for="(item, index) in cols[colindex]" :key="index" :href="`https://thingsthat.unalike.net${item.path}`" class="item" target="_blank">
-                        <figure v-if="item.meta.media && item.meta.media.content">
-                            <img loading="lazy" :src="item.meta.media.content.data.url">
-                        </figure>
-
                         <div class="label">
                             <strong>{{ item.meta.title }}</strong>
+                            <p class="date">{{ item.publishedAt | formatDate }}</p>
                             {{ item.meta.summary }}
                         </div>
                     </a>
@@ -23,7 +20,7 @@
 
 <script>
 
-import '~/scss/components/journal-list.scss';
+import '~/scss/components/journal.scss';
 
 import Unalike from '@createunalike/unalike-js';
 
@@ -49,6 +46,7 @@ export default {
                         id
                         meta
                         path
+                        publishedAt
                     }
                 }`, {
                     pageSize: 20,

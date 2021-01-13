@@ -5,14 +5,15 @@
                 <slot name="header" />
             </div>
             <div v-if="slides" class="slides__items">
-                <div v-for="(item, index) in slides" :key="index" class="slides__item" :class="[current == index ? 'current' : null, `slides__${item.type}`]" :style="`background-image: url(${loadingimage});`">
+                {{ slides }}
+                <div v-for="(item, index) in slides" :key="index" class="slides__item" :class="[current == index ? 'current' : null, `slides__${item.type}`]" :style="loadingImageBackground">
                     <div v-if="item.type == 'video'">
                         <video autoplay muted loop playsinline disableremoteplayback>
                             <source v-if="item.src.webm" :src="item.src.webm" type="video/webm">
                             <source v-if="item.src.mp4" :src="item.src.mp4" type="video/mp4">
                         </video> 
                     </div>
-                    <div v-if="item.type == 'image'" :style="`background-image: url(${item.src});`" />
+                    <div v-if="item.type == 'image'" :style="`background-image: url(${item.src.image});`" />
                 </div>
             </div>
             <div class="slides__foot">
@@ -41,6 +42,14 @@ export default {
         return {
             current: 0,
         };
+    },
+    computed: {
+        loadingImageBackground() {
+            if (this.loadingimage !== null) {
+                return `background-image: url(${this.loadingimage});`;
+            }
+            return '';
+        },
     },
     mounted() {
 

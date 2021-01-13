@@ -10,13 +10,11 @@
                     "summary": "A publishing platform designed for writers, creators, journalists, and publishers, with tools that reimagine the way we create, publish, and own stories.",
                     "url": "https://www.unalike.net",
                     "label": "www.unalike.net",
-                    "loadingimage": "/img/products/unalike/default.png",
                     "slides": [
                         {
-                            "type": "video",
+                            "type": "image",
                             "src": {
-                                "webm": "/img/products/unalike/slide1.webm",
-                                "mp4": "/img/products/unalike/slide1.mp4"
+                                "image": "/img/products/unalike/slide1.png"
                             }
                         }
                     ]

@@ -31,26 +31,21 @@ section.journal-list {
 
                 @media only screen and (min-width: 680px) {
                     &:hover {
-                        img {
-                            opacity: .8;
-                        }
+                        text-decoration: underline;
 
                         .label {
-                            opacity: .8;
+                            color: #00f;
+                        }
+
+                        .date {
+                            color: #00f;
                         }
                     }
                 }
 
-                figure {
-                    background: #000;
-                    margin-bottom: var(--padding-small);
-                    font-size: 0;
-
-                    img {
-                        background: #000;
-                        width: 100%;
-                        margin: 0;
-                    }
+                .date {
+                    font-size: var(--font-size-small);
+                    margin-bottom: .5em;
                 }
 
                 strong {
