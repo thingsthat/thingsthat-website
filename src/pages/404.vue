@@ -4,8 +4,8 @@
         <main id="error">
             <section>
                 <div class="inner">
-                    <div>
-                        Argh... you found us!
+                    <div class="">
+                        <router-link to="/">Argh... you found us!</router-link>
                     </div>
                 </div>
             </section>

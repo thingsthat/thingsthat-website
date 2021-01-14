@@ -10,14 +10,20 @@ main#error {
                 background-image: url('/img/404.gif');
                 background-position: center;
                 background-size: cover;
-                min-height: 60vw;
+                min-height: 50vw;
                 display: flex;
                 align-items: center;
                 justify-content: center;
 
+                @media only screen and (min-width: 680px) {
+                    &:hover {
+                        background-image: url('/img/404home.gif');
+                    }
+                }
+
                 @media only screen and (max-width: 680px) {
                     min-height: auto;
-                    height: 35vh;
+                    height: 40vh;
                 }
             }
         }

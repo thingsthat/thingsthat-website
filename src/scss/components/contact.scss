@@ -16,6 +16,12 @@
             background-size: cover;
             width: 300px;
             height: 300px;
+            visibility: hidden;
+            position: absolute;
+
+            &.active {
+                visibility: visible;
+            }
         }
     }
 }
