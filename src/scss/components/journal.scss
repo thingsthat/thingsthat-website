@@ -1,33 +1,20 @@
 section.journal-list {
-    .journal-list__list {
-        min-height: 500px;
-        display: flex;
+    ul {
+        margin: 0;
+        padding: 0;
+        position: relative;
 
-        .col {
-            min-height: 500px;
-            flex: 1;
-            margin-right: var(--padding);
+        li {
+            display: block;
+            font-size: var(--font-size-small);
+            font-weight: 400;
+            line-height: var(--line-height-body);
+            margin: 0 0 var(--padding);
+            padding: 0;
+            position: absolute;
 
-            &:last-child {
-                margin-right: 0;
-            }
-
-            @media only screen and (max-width: 680px) {
-                margin-right: 0;
-            }
-
-            .item {
-                display: block;
-                font-size: var(--font-size-small);
-                margin-bottom: var(--padding);
-                font-weight: 400;
-                text-decoration: none;
-                border: 0;
-                line-height: var(--line-height-body);
-
-                &:hover {
-                    opacity: 1;
-                }
+            a {
+                border-bottom: 0;
 
                 @media only screen and (min-width: 680px) {
                     &:hover {
@@ -42,17 +29,17 @@ section.journal-list {
                         }
                     }
                 }
+            }
 
-                .date {
-                    font-size: var(--font-size-small);
-                    margin-bottom: .5em;
-                }
+            .date {
+                font-size: var(--font-size-small);
+                margin-bottom: .5em;
+            }
 
-                strong {
-                    display: block;
-                    margin-bottom: var(--padding-xsmall);
-                    font-size: var(--font-size-medium);
-                }
+            strong {
+                display: block;
+                margin-bottom: var(--padding-xsmall);
+                font-size: var(--font-size-medium);
             }
         }
     }

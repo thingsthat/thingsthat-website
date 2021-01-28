@@ -3,17 +3,15 @@
         <div class="inner">
             <h2>Journal</h2>
             
-            <div class="journal-list__list">
-                <div v-for="(col, colindex) in cols" :key="colindex" class="col">
-                    <a v-for="(item, index) in cols[colindex]" :key="index" :href="`https://thingsthat.unalike.net${item.path}`" class="item" target="_blank">
-                        <div class="label">
-                            <strong>{{ item.meta.title }}</strong>
-                            <p class="date">{{ item.publishedAt | formatDate }}</p>
-                            {{ item.meta.summary }}
-                        </div>
+            <ul ref="list">
+                <li v-for="(item, index) in items" :key="index">
+                    <a :href="`https://blog.thingsthat.com${item.path}`" target="_blank">
+                        <strong>{{ item.meta.title }}</strong>
+                        <p class="date">{{ item.publishedAt | formatDate }}</p>
+                        {{ item.meta.summary }}
                     </a>
-                </div>
-            </div>
+                </li>
+            </ul>
         </div>
     </section>  
 </template>
@@ -28,82 +26,118 @@ export default {
     name: 'JournalList',
     data() {
         return {
-            cols: [],
             items: [],
         };
     },
     async mounted() {
 
-        if (process.isClient) {
-
-            try {
-
-                const client = new Unalike();
-                client.setApi('https://thingsthat.unalike.net/api');
-
-                const response = await client.query(`query contents($pageSize: Int, $sortBy: String, $sortDirection: SortDirection, $type: [String]) {
-                    contents(pageSize: $pageSize, sortBy: $sortBy, sortDirection: $sortDirection, type: $type) {
-                        id
-                        meta
-                        path
-                        publishedAt
-                    }
-                }`, {
-                    pageSize: 20,
-                    sortBy: 'publishedAt',
-                    sortDirection: 'DESC',
-                    type: ['story'],
-                });
-
-                this.items = response.data.contents.filter((item) => item.meta);
-                
-                this.refreshColumns();
-
-                window.addEventListener('resize', this.refreshColumns);
-
-                this.$emit('loaded');
-
-            } catch (err) {
-
-                console.error(err);
-
-            }
-    
-        }
+        this.fetch();
 
     },
     beforeDestroy() {
 
-        if (process.isClient) {
-            window.removeEventListener('resize', this.refreshColumns);
+        if (process.isClient && this.resizeObserver) {
+            this.resizeObserver.disconnect();
         }
-        
+
     },
     methods: {
-        refreshColumns() {
+        async fetch() {
 
-            this.cols = [];
+            if (process.isClient) {
 
-            if (window.innerWidth > 1200) {
-                this.cols.push([]);
-                this.cols.push([]);
-                this.cols.push([]); 
-            } else if (window.innerWidth > 824) {
-                this.cols.push([]);
-                this.cols.push([]); 
-            } else {
-                this.cols.push([]);
+                try {
+
+                    const client = new Unalike();
+                    client.setApi('https://thingsthat.unalike.net/api');
+
+                    const response = await client.query(`query contents($pageSize: Int, $sortBy: String, $sortDirection: SortDirection, $type: [String]) {
+                        contents(pageSize: $pageSize, sortBy: $sortBy, sortDirection: $sortDirection, type: $type) {
+                            id
+                            meta
+                            path
+                            publishedAt
+                        }
+                    }`, {
+                        pageSize: 20,
+                        sortBy: 'publishedAt',
+                        sortDirection: 'DESC',
+                        type: ['story'],
+                    });
+
+                    this.items = response.data.contents.filter((item) => item.meta);
+
+                    this.resizeObserver = new ResizeObserver((entries) => {
+                        this.resizeItems();
+                    });
+
+                    // start observing a DOM node
+                    this.resizeObserver.observe(document.body);
+                    
+                    this.resizeItems();
+
+                    this.$emit('loaded');
+
+                } catch (err) {
+
+                    console.error(err);
+
+                }
+        
             }
 
-            let colIndex = 0;
+        },
+        resizeItems() {
 
-            for (const item of this.items) {
-                this.cols[colIndex].push(item);
-                colIndex++;
+            if (this.$refs.list) {
 
-                if (colIndex >= this.cols.length) {
-                    colIndex = 0;
+                let columns = [0, 0, 0];
+
+                if (window.innerWidth < 768) {
+                    columns = [0];
+                } else if (window.innerWidth < 1124) {
+                    columns = [0, 0];
                 }
+
+                const allItems = this.$refs.list.childNodes;
+                let colIndex = 0;
+
+                for (let i = 0; i < allItems.length; i++) {
+                    
+                    const padding = 20;
+                    const item = allItems[i];
+                    const width = (this.$refs.list.getBoundingClientRect().width / columns.length) - (padding / columns.length);
+                    const itemHeight = item.getBoundingClientRect().height;
+                    
+                    item.style.width = `${width}px`;
+
+                    const top = columns[colIndex];
+                    const left = (width + padding) * (colIndex);
+                    
+                    item.style.top = `${top}px`;
+                    item.style.left = `${left}px`;
+
+                    const newTop = columns[colIndex] + itemHeight + padding;
+                    columns[colIndex] = newTop;
+
+                    colIndex++;
+
+                    if (colIndex == columns.length) {
+                        colIndex = 0;
+                    }
+
+                }
+
+                let totalHeight = 0;
+
+                for (const column of columns) {
+                    if (column > totalHeight) {
+                        totalHeight = column;
+                    }
+                }
+
+                this.$refs.list.style.height = `${totalHeight}px`;
+
             }
             
         },
