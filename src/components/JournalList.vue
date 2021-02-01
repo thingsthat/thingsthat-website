@@ -67,6 +67,13 @@ export default {
 
                     this.items = response.data.contents.filter((item) => item.meta);
 
+                    for (const item of this.items) {
+                        if ('title' in item.meta && typeof item.meta.title == 'object') {
+                            item.meta.title = Unalike.Transformer.convertDeltaToHtml(item.meta.title);
+                            item.meta.title = item.meta.title.replace(/(<([^>]+)>)/gi, '');
+                        }
+                    }
+
                     this.resizeObserver = new ResizeObserver((entries) => {
                         this.resizeItems();
                     });
