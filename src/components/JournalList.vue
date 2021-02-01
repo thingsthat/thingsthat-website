@@ -9,6 +9,7 @@
                         <strong>{{ item.meta.title }}</strong>
                         <p class="date">{{ item.publishedAt | formatDate }}</p>
                         {{ item.meta.summary }}
+                        {{ item.tags.join(' ') }}
                     </a>
                 </li>
             </ul>
@@ -48,7 +49,7 @@ export default {
 
                 try {
 
-                    const client = new Unalike();
+                    const client = new Unalike.Client();
                     client.setApi('https://thingsthat.unalike.net/api');
 
                     const response = await client.query(`query contents($pageSize: Int, $sortBy: String, $sortDirection: SortDirection, $type: [String]) {
@@ -56,6 +57,7 @@ export default {
                             id
                             meta
                             path
+                            tags
                             publishedAt
                         }
                     }`, {
