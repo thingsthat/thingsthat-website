@@ -4,7 +4,7 @@
         <main>
             <section>
                 <div class="inner">
-                    <h2>Privacy Policy</h2>
+                    <h1>Privacy Policy</h1>
 
                     <p>At Things &amp; That we have the following principles when it comes to privacy...</p>
 
@@ -219,7 +219,7 @@
 <script>
 export default {
     metaInfo: {
-        title: 'Privacy',
+        title: 'Things & That privacy policy',
     },
 };
 </script>
