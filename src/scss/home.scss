@@ -22,4 +22,16 @@
         bottom: 0;
         margin-bottom: 0;
     }
+
+    #home__portfolio {
+        .inner {
+            margin: 0 auto;
+            position: relative;
+            width: 100%;
+
+            video {
+                width: 100%;
+            }
+        }
+    }
 }
