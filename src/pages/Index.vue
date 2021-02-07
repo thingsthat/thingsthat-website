@@ -14,9 +14,9 @@
 
             <section id="home__portfolio">
                 <div class="inner">
-                    <video autoplay muted loop playsinline>
-                        <source src="/portfolio.mp4" type="video/mp4">
-                        <source src="/portfolio.webm" type="video/webm">
+                    <video ref="video" autoplay muted loop playsinline @click.prevent="handleClickVideo">
+                        <source src="/portfolio-out.mp4" type="video/mp4">
+                        <source src="/portfolio-out.webm" type="video/webm">
                     </video>
                 </div>
             </section>
@@ -47,6 +47,13 @@ export default {
     },
     components: {
         JournalList,
+    },
+    methods: {
+        handleClickVideo() {
+
+            this.$refs.video.muted = !this.$refs.video.muted;
+            
+        },
     },
 };
 
