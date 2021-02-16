@@ -14,10 +14,12 @@
 
             <section id="home__portfolio">
                 <div class="inner">
-                    <video ref="video" autoplay muted loop playsinline @click.prevent="handleClickVideo">
+                    <video ref="video" autoplay loop playsinline :muted="videoMuted" @click.prevent="handleClickVideo">
                         <source src="/portfolio-out.mp4" type="video/mp4">
                         <source src="/portfolio-out.webm" type="video/webm">
                     </video>
+
+                    <a @click="toggleVideoMute" v-text="videoMuted ? 'UNMUTE' : 'MUTE'" />
                 </div>
             </section>
             
@@ -48,10 +50,20 @@ export default {
     components: {
         JournalList,
     },
+    data() {
+        return {
+            videoMuted: true,
+        };
+    },
     methods: {
         handleClickVideo() {
 
-            this.$refs.video.muted = !this.$refs.video.muted;
+            this.toggleVideoMute();
+            
+        },
+        toggleVideoMute() {
+
+            this.videoMuted = !this.videoMuted;
             
         },
     },
