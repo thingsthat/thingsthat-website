@@ -1,7 +1,5 @@
-#home {
-
+.home {
     section:first-child {
-
         h1 {
             margin-bottom: 1em;
             font-size: var(--font-size-h1);
@@ -15,7 +13,6 @@
             line-height: 1.5;
             font-weight: 500;
         }
-
     }
 
     footer {
@@ -23,12 +20,19 @@
         margin-bottom: 0;
     }
 
-    #home__portfolio {
+    &__portfolio {
+        position: relative;
+        left: 50%;
+        margin: 0 -50vw;
+        right: 50%;
+        width: 100vw;
+        padding: 0;
+
         .inner {
+            padding: 0;
             margin: 0 auto;
             position: relative;
             width: 100%;
-            text-align: right;
 
             video {
                 cursor: pointer;
@@ -36,9 +40,10 @@
             }
 
             a {
+                margin-left: 2em;
                 user-select: none;
                 display: inline-block;
-                margin-top: 15px;
+                margin-top: 1em;
                 cursor: pointer;
                 font-weight: 600;
                 border-bottom: 0;

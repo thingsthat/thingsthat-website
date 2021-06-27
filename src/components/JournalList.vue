@@ -19,7 +19,7 @@
 
 <script>
 
-import '~/scss/components/journal.scss';
+import './JournalList.scss';
 
 import Unalike from '@createunalike/unalike-js';
 

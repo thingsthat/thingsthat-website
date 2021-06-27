@@ -81,6 +81,12 @@ main {
     width: 100%;
 }
 
+section:first-child {
+    .inner {
+        padding-top: sizeScale(40, 80);
+    }
+}
+
 h1 {
     font-weight: 500;
     line-height: var(--line-height-header);

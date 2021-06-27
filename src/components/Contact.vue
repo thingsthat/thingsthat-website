@@ -22,7 +22,7 @@
 
 <script>
 
-import '~/scss/components/contact.scss';
+import './Contact.scss';
 
 export default {
     name: 'Contact',

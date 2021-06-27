@@ -1,18 +1,18 @@
 <template>
     <DefaultLayout>
         <HeaderBar />
-        <main id="home">
+        <main class="home">
             <section>
                 <div class="inner">
-                    <h1>Hello, I'm Jack, an independent freelance designer and developer, currently based in London.</h1>
-                    
-                    <p>I'm a big fan of building products that are intuitive and fun, eliminating noise through good code and simple design. Specialising in content management, publishing, e-commerce, live streaming and real-time applications, video and audio, and storytelling.</p>
+                    <h1>Hello, I'm Jack, an independent freelance product designer and developer, currently based in London.</h1>
 
-                    <p>I've worked with companies such as Air New Zealand, Tesco, News UK, IBM, and The Economist as a developer. Built and lead technology teams at agencies. And built websites for clients such as <a href="https://www.beryl.cc" target="_blank" class="external">Beryl</a> and <a href="https://www.bullboat.co.uk" target="_blank" class="external">Bullboat</a>. Alongside my client work, I also make my own products such as <a href="https://www.unalike.net" target="_blank" class="external">Unalike</a>.</p>
+                    <p>I make products and services that are intuitive and fun, eliminating noise with simple design and good code. Specialising in publishing, content management, real-time and live streaming, video and audio, and storytelling.</p>
+                    
+                    <p>Alongside my consultancy work, I make my own products and services such as <a href="https://www.unalike.net" target="_blank" class="external">Unalike</a>.</p>
                 </div>
             </section>
 
-            <section id="home__portfolio">
+            <section class="home__portfolio">
                 <div class="inner">
                     <video ref="video" autoplay loop playsinline :muted="videoMuted" @click.prevent="handleClickVideo">
                         <source src="/portfolio-out.mp4" type="video/mp4">
@@ -34,7 +34,7 @@
 
 <script>
 
-import '~/scss/home.scss';
+import './Index.scss';
 
 import JournalList from '../components/JournalList.vue';
 

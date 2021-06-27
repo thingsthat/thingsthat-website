@@ -9,15 +9,16 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@createunalike/unalike-js": "^0.16.0",
+    "@createunalike/unalike-js": "^0.17.4",
     "dayjs": "^1.10.3",
-    "granim": "^2.0.0",
     "gridsome": "^0.7.23"
   },
   "devDependencies": {
-    "eslint": "^7.17.0",
-    "eslint-plugin-html": "^6.1.1",
-    "eslint-plugin-vue": "^7.4.1",
+    "eslint": "^7.29.0",
+    "eslint-plugin-html": "^6.1.2",
+    "eslint-plugin-i18next": "^5.1.1",
+    "eslint-plugin-jsdoc": "^35.4.0",
+    "eslint-plugin-vue": "^7.12.1",
     "node-sass": "^5.0.0",
     "sass-lint": "^1.13.1",
     "sass-loader": "^10.1.1",

@@ -1,5 +1,5 @@
 <template>
-    <footer>
+    <footer class="footer">
         <div class="inner">
             <div class="left">
                 &copy; 2021 Things That Ltd. All rights reserved. <g-link to="/privacy">Privacy</g-link> <g-link to="/colophon">Colophon</g-link>
@@ -13,7 +13,7 @@
 
 <script>
 
-import '~/scss/components/footer-bar.scss';
+import './FooterBar.scss';
 
 export default {
     name: 'FooterBar',

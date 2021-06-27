@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header class="header">
         <div class="inner">
             <a href="/" class="header__logo">Things &amp; That</a>
         </div>
@@ -8,7 +8,7 @@
 
 <script>
 
-import '~/scss/components/header-bar.scss';
+import './HeaderBar.scss';
 
 export default {
     name: 'HeaderBar',

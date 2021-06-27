@@ -1,7 +1,7 @@
 <template>
     <DefaultLayout>
         <HeaderBar />
-        <main id="error">
+        <main class="error">
             <section>
                 <div class="inner">
                     <div class="">
@@ -15,7 +15,7 @@
 
 <script>
 
-import '~/scss/error.scss';
+import './404.scss';
 
 export default {
     metaInfo: {
